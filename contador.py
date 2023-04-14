@@ -1,13 +1,13 @@
 import unittest
 
-def contador(phrase):
+def contadorDePalabras(frase : str):
     result = {}
-    for word in phrase.split(' '):
-        lower_word = word.lower()
-        if lower_word in result:
-            result[lower_word] += 1
+    lista = frase.split()
+    for i in lista:
+        if i in result:
+            result[i] += 1
         else:
-            result[lower_word] = 1
+            result[i] = 1
     return result
 
 if __name__ == '__main__':

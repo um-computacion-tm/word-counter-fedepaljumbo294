@@ -1,13 +1,13 @@
 import unittest
-from contador import contador
+from contador import contadorDePalabras
 
 class TestContador(unittest.TestCase):
     def test_simple(self):
-        result = contador('hola')
+        result = contadorDePalabras('hola')
         self.assertEqual(result, {'hola': 1})
 
     def test_complex(self):
-        result = contador('Hola como estas hola')
+        result = contadorDePalabras('hola como estas hola')
         self.assertEqual(
             result,
             {
